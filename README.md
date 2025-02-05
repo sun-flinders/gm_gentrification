@@ -1,9 +1,9 @@
 
-## Greater Manchester Gentrification Index
+# Greater Manchester Gentrification Index
 
-# Authors: Sophie Flinders & Adam Almeida
+## Authors: Sophie Flinders & Adam Almeida
 
-# Description: 
+## Description: 
 This project is a quantitative analysis of gentrification in the Greater Manchester area between 2013 and 2023.  
 The Gentrification Index uses five measures: 
  - Change in BAME residents between 2013 and 2022
