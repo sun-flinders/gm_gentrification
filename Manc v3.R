@@ -35,23 +35,23 @@ setwd(dir = "************")
 ###################### load data
 
 #### maps and lookups
-lsoa_map11 <- st_read('Lower_LSOA_2011/LSOA_2011_EW_BFE_V3.shp')
-ward_convert <- fread(file= 'Manchester Gentrification/LSOA_(2021)_to_Ward_(2023)_to_LAD_(2023).csv')
-lsoa11_ward <- fread(file= 'Manchester Gentrification/LSOA11_WD20_LAD20_EW_LU_v2.csv')
+lsoa_map11 <- st_read('LSOA_2011_EW_BFE_V3.shp')
+ward_convert <- fread(file= 'LSOA_(2021)_to_Ward_(2023)_to_LAD_(2023).csv')
+lsoa11_ward <- fread(file= 'LSOA11_WD20_LAD20_EW_LU_v2.csv')
 ward <- st_read('bdline_essh_gb/Data/GB/district_borough_unitary_ward_region.shp')
-# pc2lsoa <- fread(file = 'Manchester Gentrification/postcode_to_lsoa.csv') #postcode to lsoa11nm
-# pc2lsoa2 <- fread(file = 'Manchester Gentrification/postcode_OA_LSOA_MSOA_lookup.csv') #postcode to lsoa11nm
-la_shape <- st_read('LA shapefiles/Local_Authority_Districts_December_2011_GB_BGC.shp')
+pc2lsoa <- fread(file = 'postcode_to_lsoa.csv') #postcode to lsoa11nm
+pc2lsoa2 <- fread(file = 'postcode_OA_LSOA_MSOA_lookup.csv') #postcode to lsoa11nm
+la_shape <- st_read('Local_Authority_Districts_December_2011_GB_BGC.shp')
 
 #### measures
-churn <- fread(file = 'Manchester Gentrification/hh_churn_lsoa11_2023.csv')
-rmd <- fread(file = 'Manchester Gentrification/MEP_RMD_DORM_to2023/RMD_97-23/RMD_out_LSOA_releasedata.csv')
-ethn_13 <- fread(file = 'Manchester Gentrification/MEP_RMD_DORM_to2023/MEP_LSOA/MEP_lsoa11_2013.csv')
-ethn_22 <- fread(file = 'Manchester Gentrification/MEP_RMD_DORM_to2023/MEP_LSOA/MEP_lsoa11_2022.csv')
-hp <- fread(file = 'Manchester Gentrification/house_price.csv')
-hp_avg <- read.csv(file = 'Manchester Gentrification/hp_clean.csv') %>% select(-1) #imputed and cleaned dataset
-wage12 <- read_excel(path = 'Manchester Gentrification/wage1112.xls', sheet = "Total weekly income", skip = 4)
-wage20 <- read_excel(path = 'Manchester Gentrification/wage20.xlsx', sheet = "Total annual income", skip = 4)
+churn <- fread(file = 'hh_churn_lsoa11_2023.csv')
+rmd <- fread(file = 'MEP_RMD_DORM_to2023/RMD_97-23/RMD_out_LSOA_releasedata.csv')
+ethn_13 <- fread(file = 'MEP_RMD_DORM_to2023/MEP_LSOA/MEP_lsoa11_2013.csv')
+ethn_22 <- fread(file = 'MEP_RMD_DORM_to2023/MEP_LSOA/MEP_lsoa11_2022.csv')
+hp <- fread(file = 'house_price.csv')
+hp_avg <- read.csv(file = 'hp_clean.csv') %>% select(-1) #imputed and cleaned dataset
+wage12 <- read_excel(path = 'wage1112.xls', sheet = "Total weekly income", skip = 4)
+wage20 <- read_excel(path = 'wage20.xlsx', sheet = "Total annual income", skip = 4)
 
 ###################### set up filter for Greater Manchester
 
